@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Minesweeper 1D</title>
+  <meta charset="utf-8" />
+</head>
+<style>
+  .row {
+    display: flex;
+    margin: 20px;
+    width: fit-content;
+  }
+  .box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #bbb;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 30px;
+    background: lightgray
+  }
+  .start-button {
+    display: none;
+  }
+  .label {
+    min-width: 160px;
+    display: inline-block;
+  }
+  .box.emoji-box {
+    border: 1px solid white;
+    box-shadow: 0px 0px 0px 0px;
+    background: white
+  }
+  .box.open {
+    background: white
+  }
+  
+</style>
+<body>
+  <section>
+    <h1>Minesweeper</h1>
+    <div id='inputContent'>
+      <div>
+        <label class="label">
+          Masukan panjang kotak
+        </label>
+        : <input type="text" id='boxLength' />
+      </div>
+      <div>
+        <label class="label">
+          Masukan jumlah bom
+        </label>
+        : <input type="text" id='totalBomb' />
+      </div>
+      <div>
+        <button id='submit' onclick="getBoxLengthAndTotalBomb()">Submit</button>
+      </div>
+    </div>
+    <br>
+    <button id='startButton' class='start-button' onclick="startGame()">Start Game!</button>
+    <div id='alert'></div>
+    <div class="row" id='row'>
+      
+    </div>
+  </section>
+</body>
+<!-- <script src="script.js"></script> -->
+<script src="scriptRekursif.js"></script>
+</html>
